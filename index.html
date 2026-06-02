@@ -206,49 +206,6 @@ body{font-family:'Nunito',sans-serif;background:var(--bg);color:var(--tx);min-he
 .toast.show{transform:translateX(-50%) translateY(0)}
 .divider{border:none;border-top:1px solid var(--gb)}
 @keyframes spin{to{transform:rotate(360deg)}}
-/* === 교양 카드 텍스트 잘림 수정 === */
-
-/* 1) 과목명 줄바꿈 허용 */
-.gy-subj-hd{ align-items:flex-start; gap:8px; }
-.gy-subj-name{
-  white-space:normal;
-  word-break:keep-all;   /* 한글 어절 단위 줄바꿈 */
-  overflow-wrap:anywhere;
-  line-height:1.4;
-  flex:1; min-width:0;
-}
-.gy-subj-info{ white-space:normal; word-break:keep-all; }
-
-/* 우측 체크 아이콘이 줄어들지 않도록 */
-.gy-subj-hd > *:last-child{ flex-shrink:0; }
-
-/* 2) 펼쳤을 때 잘리지 않도록 리스트 높이 확장 */
-.gy-subj-list{ max-height:none; overflow:visible; }
-/* 만약 전체 화면 스크롤로 충분히 길게 보이게 하려면 위처럼 풀고,
-   리스트 영역만 스크롤하고 싶다면 아래로 대체:
-.gy-subj-list{ max-height:60vh; }
-*/
-
-/* 3) 펼쳐진 본문(교수 옵션) 줄바꿈 */
-.gy-subj-bd{ overflow:visible; }
-.popt{ align-items:flex-start; gap:8px; flex-wrap:wrap; }
-.popt > div:first-child{ flex:1; min-width:0; }
-.pname, .ptime, .proom{
-  white-space:normal;
-  word-break:keep-all;
-  overflow-wrap:anywhere;
-  line-height:1.45;
-}
-.pchk{ flex-shrink:0; }
-
-/* 4) 시간표 확인 화면의 카드도 동일 처리 */
-.card-hd{ align-items:flex-start; gap:8px; }
-.card-name{
-  white-space:normal; word-break:keep-all; overflow-wrap:anywhere;
-  line-height:1.4; flex:1; min-width:0;
-}
-.card-sub{ white-space:normal; word-break:keep-all; }
-.card-tag{ flex-shrink:0; }
 
 </style>
 </head>
